@@ -1,0 +1,22 @@
+name: add-produce-bad-client-data
+description: Client attempts to add new produce item, but doesn't supply a required field.
+priority: 1
+request:
+  method: POST
+  url: /api/v1/produce
+  headers:
+    Content-Type: application/json
+  body:
+    name: ""
+    subName: ""
+    quantity: 75
+  matchers:
+    headers:
+    - key: Content-Type
+      regex: "application/json.*"
+response:
+  status: 400
+  body:
+    errorMessage: "Missing required value!"
+  headers:
+    Content-Type: application/json;charset=UTF-8

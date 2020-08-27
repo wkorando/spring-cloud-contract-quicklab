@@ -1,0 +1,29 @@
+{
+  "id" : "ffbb3dd9-a4c6-4c61-a93b-944c3438a145",
+  "request" : {
+    "url" : "/api/v1/produce",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['subName'] == '')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['name'] == '')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.['quantity'] == 75)]"
+    } ]
+  },
+  "response" : {
+    "status" : 400,
+    "body" : "{\"errorMessage\":\"Missing required value!\"}",
+    "headers" : {
+      "Content-Type" : "application/json;charset=UTF-8"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "ffbb3dd9-a4c6-4c61-a93b-944c3438a145",
+  "priority" : 1
+}
