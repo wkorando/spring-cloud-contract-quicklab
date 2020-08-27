@@ -1,6 +1,0 @@
-[source,bash]
-----
-$ echo '{"name":"","subName":"","quantity":75}' | http POST 'http://localhost:8080/api/v1/produce' \
-    'Content-Type:application/json;charset=ISO-8859-1' \
-    'Content-Type:application/json'
-----
