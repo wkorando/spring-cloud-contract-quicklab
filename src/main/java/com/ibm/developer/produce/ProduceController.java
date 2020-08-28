@@ -21,13 +21,11 @@ public class ProduceController {
 		this.service = service;
 	}
 
-
-
 	@GetMapping("/{name}")
 	public ResponseEntity<Iterable<Produce>> findProduceByName(@PathVariable String name) {
 		return ResponseEntity.ok(service.findProduceByName(name));
 	}
-	
+
 	@PostMapping
 	public ResponseEntity<Produce> addNewProduce(@RequestBody Produce produce) {
 		return ResponseEntity.ok(service.addNewProduce(produce));

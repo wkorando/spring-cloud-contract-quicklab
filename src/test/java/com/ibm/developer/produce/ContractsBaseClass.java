@@ -31,12 +31,11 @@ public class ContractsBaseClass {
 	
 	@Autowired
 	private ProduceController controller;
+	@Autowired
+	private ProduceService service;
 
 	@MockBean
 	private ProduceRepo repo;
-
-	@MockBean
-	private ProduceService service;
 
 	@Before
 	public void before() throws Throwable {
@@ -45,12 +44,10 @@ public class ContractsBaseClass {
 						new Produce(2, "Apple", "Gala", 50),//
 						new Produce(3, "Corn", "Sweet", 1000), //
 						new Produce(4, "Pineapple", "", 300)));
-		when(service.findProduceByName("Apple")).thenReturn(
+		when(repo.findByName("Apple")).thenReturn(
 				Arrays.asList(new Produce(1, "Apple", "Granny Smith", 100), 
 						new Produce(2, "Apple", "Gala", 50)));
-		when(service.findProduceByName("+")).thenThrow(new ClientException("Produce name must be alpha numeric!"));
-		when(service.addNewProduce(new Produce(0, "Kiwi", "", 75))).thenReturn(new Produce(10, "Kiwi", "", 75));
-		when(service.addNewProduce(new Produce(0, "", "", 75))).thenThrow(new ClientException("Missing required value!"));
+		when(repo.save(new Produce(0, "Kiwi", "", 75))).thenReturn(new Produce(10, "Kiwi", "", 75));
 		RestAssuredMockMvc.standaloneSetup(MockMvcBuilders
 				.standaloneSetup(controller)
 				.apply(documentationConfiguration(this.restDocumentation))
