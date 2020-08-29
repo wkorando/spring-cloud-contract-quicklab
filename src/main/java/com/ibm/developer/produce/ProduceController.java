@@ -20,12 +20,18 @@ public class ProduceController {
 		this.repo = repo;
 		this.service = service;
 	}
+	
+	@GetMapping
+	public ResponseEntity<Iterable<Produce>> findAllProduce() {
+		return ResponseEntity.ok(repo.findAll());
+	}
 
+	
 	@GetMapping("/{name}")
 	public ResponseEntity<Iterable<Produce>> findProduceByName(@PathVariable String name) {
 		return ResponseEntity.ok(service.findProduceByName(name));
 	}
-
+	
 	@PostMapping
 	public ResponseEntity<Produce> addNewProduce(@RequestBody Produce produce) {
 		return ResponseEntity.ok(service.addNewProduce(produce));

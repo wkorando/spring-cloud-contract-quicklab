@@ -1,0 +1,26 @@
+name: find-all-produce
+description: Retrieve all produce
+request:
+  method: GET
+  url: /api/v1/produce
+response:
+  status: 200
+  body:
+    - id: 1
+      name: "Apple"
+      subName: "Granny Smith"
+      quantity: 100
+    - id: 2
+      name: "Apple"
+      subName: "Gala"
+      quantity: 50
+    - id: 3
+      name: "Corn"
+      subName: "Sweet"
+      quantity: 1000
+    - id: 4
+      name: "Pineapple"
+      subName: ""
+      quantity: 300
+  headers:
+    Content-Type: application/json;charset=UTF-8

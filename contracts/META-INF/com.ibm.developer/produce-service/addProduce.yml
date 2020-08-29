@@ -1,0 +1,36 @@
+name: add-produce
+description: Operation for adding a new produce item
+request:
+  method: POST
+  url: /api/v1/produce
+  headers:
+    Content-Type: application/json;charset=UTF-8
+  body:
+    name: "Kiwi"
+    subName: ""
+    quantity: 75
+  matchers:
+    headers:
+    - key: Content-Type
+      regex: "application/json.*"
+    body:
+      - path: $.quantity
+        type: by_regex
+        value: "[0-9]+"
+      - path: $.name
+        type: by_regex
+        predefined: only_alpha_unicode
+response:
+  status: 200
+  body:
+    id: 10
+    name: "Kiwi"
+    subName: ""
+    quantity: 75
+  headers:
+    Content-Type: application/json;charset=UTF-8
+  matchers:
+    body:
+      - path: $.id
+        type: by_regex
+        value: "[0-9]+"

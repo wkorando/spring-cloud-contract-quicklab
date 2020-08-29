@@ -1,0 +1,18 @@
+name: find-produce-by-name
+description: Find find all produce that matches supplied name
+request:
+  method: GET
+  url: /api/v1/produce/Apple
+response:
+  status: 200
+  body:
+    - id: 1
+      name: "Apple"
+      subName: "Granny Smith"
+      quantity: 100
+    - id: 2
+      name: "Apple"
+      subName: "Gala"
+      quantity: 50
+  headers:
+    Content-Type: application/json;charset=UTF-8
