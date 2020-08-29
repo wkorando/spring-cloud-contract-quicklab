@@ -1,5 +1,5 @@
 docker run --rm \
--e "STUBRUNNER_IDS=com.ibm.developer:produce-service:+:stubs:9876" \
+-e "STUBRUNNER_IDS=com.ibm.developer:produce-service:+:9876" \
 -e "STUBRUNNER_STUBS_MODE=LOCAL" \
 -v "${HOME}/.m2/:/root/.m2:ro" \
 -p "8083:8083" \
