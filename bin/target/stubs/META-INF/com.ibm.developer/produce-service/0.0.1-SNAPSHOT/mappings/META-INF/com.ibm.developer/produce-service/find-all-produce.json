@@ -1,0 +1,16 @@
+{
+  "id" : "08d53bc8-528d-47db-9106-769cf64c23ac",
+  "request" : {
+    "url" : "/api/v1/produce",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"id\":1,\"name\":\"Apple\",\"subName\":\"Granny Smith\",\"quantity\":100},{\"id\":2,\"name\":\"Apple\",\"subName\":\"Gala\",\"quantity\":50},{\"id\":3,\"name\":\"Corn\",\"subName\":\"Sweet\",\"quantity\":1000},{\"id\":4,\"name\":\"Pineapple\",\"subName\":\"\",\"quantity\":300}]",
+    "headers" : {
+      "Content-Type" : "application/json;charset=UTF-8"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "08d53bc8-528d-47db-9106-769cf64c23ac"
+}

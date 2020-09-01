@@ -1,0 +1,16 @@
+{
+  "id" : "1b9f65b6-43a8-4fec-93f7-16b5e118fae5",
+  "request" : {
+    "url" : "/api/v1/produce/Apple",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "[{\"id\":1,\"name\":\"Apple\",\"subName\":\"Granny Smith\",\"quantity\":100},{\"id\":2,\"name\":\"Apple\",\"subName\":\"Gala\",\"quantity\":50}]",
+    "headers" : {
+      "Content-Type" : "application/json;charset=UTF-8"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "1b9f65b6-43a8-4fec-93f7-16b5e118fae5"
+}

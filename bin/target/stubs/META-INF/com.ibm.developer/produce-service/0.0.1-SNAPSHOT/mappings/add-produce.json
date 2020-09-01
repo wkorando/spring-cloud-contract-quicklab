@@ -1,0 +1,28 @@
+{
+  "id" : "5270fe35-8a00-4864-bd33-8ede843bbaeb",
+  "request" : {
+    "url" : "/api/v1/produce",
+    "method" : "POST",
+    "headers" : {
+      "Content-Type" : {
+        "matches" : "application/json.*"
+      }
+    },
+    "bodyPatterns" : [ {
+      "matchesJsonPath" : "$[?(@.['subName'] == '')]"
+    }, {
+      "matchesJsonPath" : "$[?(@.quantity =~ /([0-9]+)/)]"
+    }, {
+      "matchesJsonPath" : "$[?(@.name =~ /([\\p{L}]*)/)]"
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"id\":10,\"name\":\"Kiwi\",\"subName\":\"\",\"quantity\":75}",
+    "headers" : {
+      "Content-Type" : "application/json;charset=UTF-8"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "5270fe35-8a00-4864-bd33-8ede843bbaeb"
+}

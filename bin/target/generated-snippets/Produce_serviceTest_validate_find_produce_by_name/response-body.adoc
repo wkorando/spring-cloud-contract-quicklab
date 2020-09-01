@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+[{"id":1,"name":"Apple","subName":"Granny Smith","quantity":100},{"id":2,"name":"Apple","subName":"Gala","quantity":50}]
+----

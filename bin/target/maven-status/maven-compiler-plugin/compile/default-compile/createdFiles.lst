@@ -1,0 +1,7 @@
+com/ibm/developer/produce/Produce.class
+com/ibm/developer/produce/ProduceController$ErrorMessage.class
+com/ibm/developer/produce/ProduceController.class
+com/ibm/developer/produce/ClientException.class
+com/ibm/developer/produce/ProduceService.class
+com/ibm/developer/produce/ProducerServiceApplication.class
+com/ibm/developer/produce/ProduceRepo.class
