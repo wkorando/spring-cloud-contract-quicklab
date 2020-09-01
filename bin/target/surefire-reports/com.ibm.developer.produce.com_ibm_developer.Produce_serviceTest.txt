@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.ibm.developer.produce.com_ibm_developer.Produce_serviceTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.296 s - in com.ibm.developer.produce.com_ibm_developer.Produce_serviceTest

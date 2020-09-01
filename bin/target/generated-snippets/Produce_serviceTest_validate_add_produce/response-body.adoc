@@ -1,4 +1,0 @@
-[source,options="nowrap"]
-----
-{"id":10,"name":"Kiwi","subName":"","quantity":75}
-----
