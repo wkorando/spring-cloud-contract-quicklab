@@ -28,9 +28,12 @@ response:
     subName: ""
     quantity: 75
   headers:
-    Content-Type: application/json;charset=UTF-8
+    Content-Type: application/json
   matchers:
     body:
       - path: $.id
         type: by_regex
         value: "[0-9]+"
+    headers:
+    - key: Content-Type
+      regex: "application/json*"

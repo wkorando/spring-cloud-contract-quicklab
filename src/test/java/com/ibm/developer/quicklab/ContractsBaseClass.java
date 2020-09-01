@@ -1,4 +1,4 @@
-package com.ibm.developer.produce;
+package com.ibm.developer.quicklab;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
@@ -16,6 +16,11 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.restdocs.JUnitRestDocumentation;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.ibm.developer.quicklab.Produce;
+import com.ibm.developer.quicklab.ProduceController;
+import com.ibm.developer.quicklab.ProduceRepo;
+import com.ibm.developer.quicklab.ProduceService;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
 

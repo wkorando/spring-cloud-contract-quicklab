@@ -1,4 +1,4 @@
-package com.ibm.developer.produce;
+package com.ibm.developer.quicklab;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;

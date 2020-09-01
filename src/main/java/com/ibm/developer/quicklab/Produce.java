@@ -1,4 +1,4 @@
-package com.ibm.developer.produce;
+package com.ibm.developer.quicklab;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
