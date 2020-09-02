@@ -21,12 +21,6 @@ public class ProduceController {
 		this.service = service;
 	}
 	
-	@GetMapping
-	public ResponseEntity<Iterable<Produce>> findAllProduce() {
-		return ResponseEntity.ok(repo.findAll());
-	}
-
-	
 	@GetMapping("/{name}")
 	public ResponseEntity<Iterable<Produce>> findProduceByName(@PathVariable String name) {
 		return ResponseEntity.ok(service.findProduceByName(name));
